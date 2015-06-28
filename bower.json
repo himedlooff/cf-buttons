@@ -25,6 +25,9 @@
     "cf-core": "^1.0.0",
     "cf-icons": "^1.0.0"
   },
+  "devDependencies": {
+    "doxray-template": "0.2.0"
+  },
   "exportsOverride": {
     "cf-*": {
       "css": "src/**/*.css",
