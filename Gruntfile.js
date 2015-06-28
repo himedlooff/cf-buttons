@@ -57,7 +57,13 @@ module.exports = function(grunt) {
     },
     env: process.env,
 
-    // Define tasks specific to this project here
+    copy: {
+      'move-doxray-template': {
+        files: [
+          { cwd: 'src/vendor/doxray-template/template/', src: ['*'], dest: 'doxray-docs/', expand: true }
+        ],
+      },
+    }
 
   };
 
@@ -102,5 +108,22 @@ module.exports = function(grunt) {
    */
   grunt.registerTask('vendor', ['copy:docs_assets', 'concat:lt-ie8']);
   grunt.registerTask('default', ['concat:lt-ie8', 'less', 'autoprefixer', 'copy:docs', 'topdoc']);
+
+  grunt.registerTask('move-doxray-template', 'moves Doxray template files from vendor to doxray-docs', function() {
+    grunt.log.write('Moving Doxray template files...');
+    grunt.task.run('copy:move-doxray-template');
+  });
+
+  grunt.registerTask('doxray', 'parse the Less files with Doxray and save that data to the doxray-docs folder', function() {
+    grunt.log.write('Parsing Less files with Doxray...');
+    var done = this.async();
+    var doxray = require('doxray');
+    doxray(['src/cf-buttons.less'], {
+      jsFile: 'doxray-docs/doxray-parsed-data.js',
+      logging: true
+    }, function() {
+      done();
+    });
+  });
 
 };

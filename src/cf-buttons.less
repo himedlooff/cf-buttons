@@ -8,49 +8,24 @@
    Button Styling
    ========================================================================== */
 
-/* topdoc
-  name: Theme variables
+/* doxray
+  header: true
+  label: Theme variables
   family: cf-buttons
   notes:
     - "The following color and sizing variables are exposed, allowing you to
        easily override them before compiling."
-  patterns:
-  - name: Colors
-    codenotes:
-      - |
-        @btn-text
-        @btn-bg
-        @btn-bg-hover
-        @btn-bg-active
-        @btn__secondary-text
-        @btn__secondary-bg
-        @btn__secondary-bg-hover
-        @btn__secondary-bg-active
-        @btn__warning-text
-        @btn__warning-bg
-        @btn__warning-bg-hover
-        @btn__warning-bg-active
-        @btn__disabled-text
-        @btn__disabled-bg
-        @btn__disabled-outline
-  - name: Sizing
-    codenotes:
-      - |
-        @btn-font-size
-        @btn-v-padding
-        @btn-v-padding-modifier-ie
-        @super-btn-font-size
-    notes:
-      - "@btn-v-padding-modifier-ie is used to fix the vertical padding bug in
-         IE for <button>'s and <inputs>'s across various .btn styles.
-         We should revisit this after adding normalize.css to see if this is
-         still needed."
   tags:
-  - cf-buttons
-  - less
+    - cf-buttons
 */
 
-// Color variables
+
+/* doxray
+  label: Colors
+  tags:
+    - cf-buttons
+    - less
+*/
 
 // .btn
 @btn-text:                      #fff;
@@ -75,7 +50,18 @@
 @btn__disabled-bg:              lighten(greyscale(#c7336e), 40%);
 @btn__disabled-outline:         greyscale(#c7336e);
 
-// Sizing variables
+
+/* doxray
+  label: Sizing
+  notes:
+    - "`@btn-v-padding-modifier-ie` is used to fix the vertical padding bug in
+       IE for `<button>'s` and `<inputs>`'s across various .btn styles.
+       We should revisit this after adding normalize.css to see if this is
+       still needed."
+  tags:
+    - cf-buttons
+    - less
+*/
 
 // .btn
 @btn-font-size:                 14px;
@@ -86,35 +72,40 @@
 @super-btn-font-size:           18px;
 
 
-/* topdoc
-  name: Default button
+/* doxray
+  header: true
+  label: .btn
   family: cf-buttons
   notes:
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn" title="Test button">Anchor Tag</a>
-      <button class="btn" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn hover" title="Test button">Anchor Tag</a>
-      <button class="btn hover" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn focus" title="Test button">Anchor Tag</a>
-      <button class="btn focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn active" title="Test button">Anchor Tag</a>
-      <button class="btn active" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn active">
+  markup: |
+    <a href="#" class="btn" title="Test button">Anchor Tag</a>
+    <button class="btn" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn hover" title="Test button">Anchor Tag</a>
+    <button class="btn hover" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn focus" title="Test button">Anchor Tag</a>
+    <button class="btn focus" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn focus">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn active" title="Test button">Anchor Tag</a>
+    <button class="btn active" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn active">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn {
@@ -196,35 +187,39 @@
 }
 
 
-/* topdoc
-  name: Secondary button
+/* doxray
+  label: .btn__secondary
   family: cf-buttons
   notes:
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn btn__secondary">Anchor Tag</a>
-      <button class="btn btn__secondary" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__secondary">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn btn__secondary hover">Anchor Tag</a>
-      <button class="btn btn__secondary hover" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__secondary hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__secondary focus">Anchor Tag</a>
-      <button class="btn btn__secondary focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__secondary focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn btn__secondary active">Anchor Tag</a>
-      <button class="btn btn__secondary active" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__secondary active">
+  markup: |
+    <a href="#" class="btn btn__secondary">Anchor Tag</a>
+    <button class="btn btn__secondary" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__secondary">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn btn__secondary hover">Anchor Tag</a>
+    <button class="btn btn__secondary hover" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__secondary hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__secondary focus">Anchor Tag</a>
+    <button class="btn btn__secondary focus" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__secondary focus">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn btn__secondary active">Anchor Tag</a>
+    <button class="btn btn__secondary active" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__secondary active">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__secondary {
@@ -254,32 +249,40 @@
 
 }
 
-// /* topdoc
-//  name: Tertiary button
-//  family: cf-buttons
-//  patterns:
-//  - name: Default state
-//    markup: |
-//      <a href="#" class="btn btn__tertiary">Anchor Tag</a>
-//      <button class="btn btn__tertiary" title="Test button">Button Tag</button>
-//      <input type="submit" value="Input Tag" class="btn btn__tertiary">
-//  - name: Hovered state
-//    markup: |
-//      <a href="#" class="btn btn__tertiary hover">Anchor Tag</a>
-//      <button class="btn btn__tertiary hover" title="Test button">Button Tag</button>
-//      <input type="submit" value="Input Tag" class="btn btn__tertiary hover">
-//  - name: Focused state
-//    markup: |
-//      <a href="#" class="btn btn__tertiary focus">Anchor Tag</a>
-//      <button class="btn btn__tertiary focus" title="Test button">Button Tag</button>
-//      <input type="submit" value="Input Tag" class="btn btn__tertiary focus">
-//  - name: Active state
-//    markup: |
-//      <a href="#" class="btn btn__tertiary active">Anchor Tag</a>
-//      <button class="btn btn__tertiary active" title="Test button">Button Tag</button>
-//      <input type="submit" value="Input Tag" class="btn btn__tertiary active">
-//  tags:
-//  - cf-buttons
+
+// /* doxray
+//   label: .btn__tertiary
+//   family: cf-buttons
+//   notes:
+//     - "Note that the .visited, .hover, .focus, .active classes are for
+//        demonstration purposes only and should not be used in production."
+//   markup: |
+//     <a href="#" class="btn btn__tertiary">Anchor Tag</a>
+//     <button class="btn btn__tertiary" title="Test button">Button Tag</button>
+//     <input type="submit" value="Input Tag" class="btn btn__tertiary">
+// 
+//     <br><br>
+// 
+//     <code>:hover</code><br>
+//     <a href="#" class="btn btn__tertiary hover">Anchor Tag</a>
+//     <button class="btn btn__tertiary hover" title="Test button">Button Tag</button>
+//     <input type="submit" value="Input Tag" class="btn btn__tertiary hover">
+// 
+//     <br><br>
+// 
+//     <code>:focus</code><br>
+//     <a href="#" class="btn btn__tertiary focus">Anchor Tag</a>
+//     <button class="btn btn__tertiary focus" title="Test button">Button Tag</button>
+//     <input type="submit" value="Input Tag" class="btn btn__tertiary focus">
+// 
+//     <br><br>
+// 
+//     <code>:active</code><br>
+//     <a href="#" class="btn btn__tertiary active">Anchor Tag</a>
+//     <button class="btn btn__tertiary active" title="Test button">Button Tag</button>
+//     <input type="submit" value="Input Tag" class="btn btn__tertiary active">
+//   tags:
+//     - cf-buttons
 // */
 
 // .btn__tertiary {
@@ -311,35 +314,39 @@
 // }
 
 
-/* topdoc
-  name: Destructive action button
+/* doxray
+  label: .btn__warning
   family: cf-buttons
   notes:
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn btn__warning">Anchor Tag</a>
-      <button class="btn btn__warning" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__warning">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn btn__warning hover">Anchor Tag</a>
-      <button class="btn btn__warning hover" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__warning hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__warning focus">Anchor Tag</a>
-      <button class="btn btn__warning focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__warning focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn btn__warning active">Anchor Tag</a>
-      <button class="btn btn__warning active" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__warning active">
+  markup: |
+    <a href="#" class="btn btn__warning">Anchor Tag</a>
+    <button class="btn btn__warning" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__warning">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn btn__warning hover">Anchor Tag</a>
+    <button class="btn btn__warning hover" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__warning hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__warning active">Anchor Tag</a>
+    <button class="btn btn__warning active" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__warning active">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn btn__warning focus">Anchor Tag</a>
+    <button class="btn btn__warning focus" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__warning focus">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__warning {
@@ -370,29 +377,29 @@
 }
 
 
-/* topdoc
-  name: Disabled button
+/* doxray
+  label: .btn__disabled
   family: cf-buttons
   notes:
     - "Disabled buttons do not contain separate hover and active states since
        they should not be interacted with."
     - "Note that the .focus class is for demonstration purposes only and
        should not be used in production."
-  patterns:
-  - name: Default/hovered/active state
-    markup: |
-      <a href="#" class="btn btn__disabled">Anchor Tag</a>
-      <button class="btn btn__disabled" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__disabled">
-      <button class="btn" disabled title="Test button">Button Tag w/ disabled attr</button>
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
-      <button class="btn btn__disabled focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__disabled focus">
-      <button class="btn focus" disabled title="Test button">Button Tag w/ disabled attr</button>
+  markup: |
+    <a href="#" class="btn btn__disabled">Anchor Tag</a>
+    <button class="btn btn__disabled" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__disabled">
+    <button class="btn" disabled title="Test button">Button Tag w/ disabled attr</button>
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__disabled focus">Anchor Tag</a>
+    <button class="btn btn__disabled focus" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__disabled focus">
+    <button class="btn focus" disabled title="Test button">Button Tag w/ disabled attr</button>
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__disabled,
@@ -421,32 +428,36 @@
 }
 
 
-/* topdoc
-  name: Super button
+/* doxray
+  label: .btn__super
   family: cf-buttons
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn btn__super">Anchor Tag</a>
-      <button class="btn btn__super" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__super">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn btn__super hover">Anchor Tag</a>
-      <button class="btn btn__super hover" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__super hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__super focus">Anchor Tag</a>
-      <button class="btn btn__super focus" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__super focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn btn__super active">Anchor Tag</a>
-      <button class="btn btn__super active" title="Test button">Button Tag</button>
-      <input type="submit" value="Input Tag" class="btn btn__super active">
+  markup: |
+    <a href="#" class="btn btn__super">Anchor Tag</a>
+    <button class="btn btn__super" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__super">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn btn__super hover">Anchor Tag</a>
+    <button class="btn btn__super hover" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__super hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__super focus">Anchor Tag</a>
+    <button class="btn btn__super focus" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__super focus">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn btn__super active">Anchor Tag</a>
+    <button class="btn btn__super active" title="Test button">Button Tag</button>
+    <input type="submit" value="Input Tag" class="btn btn__super active">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__super {
@@ -475,114 +486,77 @@
 }
 
 
-/* topdoc
-  name: Button with icons
+/* doxray
+  label: .btn .cf-icon
+  description: An icon inside of a button.
+  notes:
+    - "For accessibility please use the .u-visually-hidden utility class
+       to add hidden text for screen readers."
   family: cf-buttons
-  patterns:
-  - name: Button icon left
-    markup: |
-      <a href="#" class="btn">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Anchor Tag
-      </a>
-      <button class="btn" title="Test button">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Button Tag
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__secondary">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Anchor Tag
-      </a>
-      <button class="btn btn__secondary" title="Test button">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Button Tag
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__warning">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Anchor Tag
-      </a>
-      <button class="btn btn__warning" title="Test button">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Button Tag
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__disabled">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Anchor Tag
-      </a>
-      <button class="btn btn__disabled" title="Test button">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Button Tag
-      </button>
-      <button class="btn" disabled title="Test button">
-          <span class="btn_icon__left cf-icon cf-icon-left"></span>
-          Button Tag w/ disabled attr
-      </button>
-  - name: Button icon right
-    markup: |
-      <a href="#" class="btn">
-          Anchor Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </a>
-      <button class="btn" title="Test button">
-          Button Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__secondary">
-          Anchor Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </a>
-      <button class="btn btn__secondary" title="Test button">
-          Button Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__warning">
-          Anchor Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </a>
-      <button class="btn btn__warning" title="Test button">
-          Button Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__disabled">
-          Anchor Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </a>
-      <button class="btn btn__disabled" title="Test button">
-          Button Tag
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </button>
-      <button class="btn" disabled title="Test button">
-          Button Tag w/ disabled attr
-          <span class="btn_icon__right cf-icon cf-icon-right"></span>
-      </button>
-  - name: Just an icon
-    markup: |
-      <a href="#" class="btn">
-          <span class="u-visually-hidden">Search</span>
-          <span class="cf-icon cf-icon-search"></span>
-      </a>
-      <button class="btn" title="Test button">
-          <span class="u-visually-hidden">Search</span>
-          <span class="cf-icon cf-icon-search"></span>
-      </button>
-    notes:
-      - "For accessibility please use the .u-visually-hidden utility class
-         to add hidden text for screen readers."
+  markup: |
+    <a href="#" class="btn">
+        <span class="u-visually-hidden">Search</span>
+        <span class="cf-icon cf-icon-search"></span>
+    </a>
+    <button class="btn" title="Test button">
+        <span class="u-visually-hidden">Search</span>
+        <span class="cf-icon cf-icon-search"></span>
+    </button>
   tags:
-  - cf-buttons
-  - fj-icons
+    - cf-buttons
+    - fj-icons
+*/
+
+
+/* doxray
+  label: .btn_icon__left
+  family: cf-buttons
+  markup: |
+    <a href="#" class="btn">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Anchor Tag
+    </a>
+    <button class="btn" title="Test button">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Button Tag
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__secondary">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Anchor Tag
+    </a>
+    <button class="btn btn__secondary" title="Test button">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Button Tag
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__warning">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Anchor Tag
+    </a>
+    <button class="btn btn__warning" title="Test button">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Button Tag
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__disabled">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Anchor Tag
+    </a>
+    <button class="btn btn__disabled" title="Test button">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Button Tag
+    </button>
+    <button class="btn" disabled title="Test button">
+        <span class="btn_icon__left cf-icon cf-icon-left"></span>
+        Button Tag w/ disabled attr
+    </button>
+  tags:
+    - cf-buttons
+    - fj-icons
 */
 
 .btn_icon__left {
@@ -605,6 +579,58 @@
         border-right-color: fade(@btn__disabled-text, 40%);
     }
 }
+
+
+/* doxray
+  label: .btn_icon__right
+  family: cf-buttons
+  markup: |
+    <a href="#" class="btn">
+        Anchor Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </a>
+    <button class="btn" title="Test button">
+        Button Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__secondary">
+        Anchor Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </a>
+    <button class="btn btn__secondary" title="Test button">
+        Button Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__warning">
+        Anchor Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </a>
+    <button class="btn btn__warning" title="Test button">
+        Button Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__disabled">
+        Anchor Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </a>
+    <button class="btn btn__disabled" title="Test button">
+        Button Tag
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </button>
+    <button class="btn" disabled title="Test button">
+        Button Tag w/ disabled attr
+        <span class="btn_icon__right cf-icon cf-icon-right"></span>
+    </button>
+  tags:
+    - cf-buttons
+    - fj-icons
+*/
 
 .btn_icon__right {
     padding: 0 0 0 unit( 10.5px / @btn-font-size, em);
@@ -629,42 +655,40 @@
 }
 
 
-/* topdoc
-  name: Button group modifiers
+/* doxray
+  label: .btn__grouped
   family: cf-buttons
-  patterns:
-  - name: Default buttons in a button group
-    markup: |
-      <a href="#" class="btn btn__grouped-first">Anchor 1</a>
-      <a href="#" class="btn btn__grouped">Anchor 2</a>
-      <a href="#" class="btn btn__grouped-last">Anchor 3</a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first" title="Test button">Button 1</button>
-      <button class="btn btn__grouped" title="Test button">Button 2</button>
-      <button class="btn btn__grouped-last" title="Test button">Button 3</button>
-      <br>
-      <br>
-      <input type="button" value="Input 1" class="btn btn__grouped-first">
-      <input type="button" value="Input 2" class="btn btn__grouped">
-      <input type="button" value="Input 3" class="btn btn__grouped-last">
-  - name: Super buttons in a button group
-    markup: |
-      <a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
-      <a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
-      <a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first btn__super" title="Test button">Button 1</button>
-      <button class="btn btn__grouped btn__super" title="Test button">Button 2</button>
-      <button class="btn btn__grouped-last btn__super" title="Test button">Button 3</button>
-      <br>
-      <br>
-      <input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
-      <input type="button" value="Input 2" class="btn btn__grouped btn__super">
-      <input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
+  markup: |
+    <a href="#" class="btn btn__grouped-first">Anchor 1</a>
+    <a href="#" class="btn btn__grouped">Anchor 2</a>
+    <a href="#" class="btn btn__grouped-last">Anchor 3</a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first" title="Test button">Button 1</button>
+    <button class="btn btn__grouped" title="Test button">Button 2</button>
+    <button class="btn btn__grouped-last" title="Test button">Button 3</button>
+    <br>
+    <br>
+    <input type="button" value="Input 1" class="btn btn__grouped-first">
+    <input type="button" value="Input 2" class="btn btn__grouped">
+    <input type="button" value="Input 3" class="btn btn__grouped-last">
+    <br>
+    <br>
+    <a href="#" class="btn btn__grouped-first btn__super">Anchor 1</a>
+    <a href="#" class="btn btn__grouped btn__super">Anchor 2</a>
+    <a href="#" class="btn btn__grouped-last btn__super">Anchor 3</a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first btn__super" title="Test button">Button 1</button>
+    <button class="btn btn__grouped btn__super" title="Test button">Button 2</button>
+    <button class="btn btn__grouped-last btn__super" title="Test button">Button 3</button>
+    <br>
+    <br>
+    <input type="button" value="Input 1" class="btn btn__grouped-first btn__super">
+    <input type="button" value="Input 2" class="btn btn__grouped btn__super">
+    <input type="button" value="Input 3" class="btn btn__grouped-last btn__super">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__grouped {
@@ -708,84 +732,82 @@
 }
 
 
-/* topdoc
-  name: Compound button
+/* doxray
+  label: .btn__compound-action
   family: cf-buttons
   notes:
-    - "This pattern requires combining .btn__grouped modifiers with
-       the .btn__compound-action modifier."
+    - "This pattern requires combining `.btn__grouped` modifiers with
+       the `.btn__compound-action` modifier."
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: All button styles
-    markup: |
-      <a href="#" class="btn btn__grouped-first">Anchor</a>
-      <a href="#" class="btn btn__grouped-last btn__compound-action">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first" title="Test button">Button</button>
-      <button class="btn btn__grouped-last btn__compound-action" title="Test button">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
-      <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first btn__secondary" title="Test button">Button</button>
-      <button class="btn btn__grouped-last btn__secondary btn__compound-action" title="Test button">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__grouped-first btn__warning">Anchor</a>
-      <a href="#" class="btn btn__grouped-last btn__warning btn__compound-action">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first btn__warning" title="Test button">Button</button>
-      <button class="btn btn__grouped-last btn__warning btn__compound-action" title="Test button">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__grouped-first btn__disabled">Anchor</a>
-      <a href="#" class="btn btn__grouped-last btn__disabled btn__compound-action">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first btn__disabled" title="Test button">Button</button>
-      <button class="btn btn__grouped-last btn__disabled btn__compound-action" title="Test button">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </button>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first" disabled title="Test button">Button w/ disabled attr</button>
-      <button class="btn btn__grouped-last btn__compound-action" disabled title="Test button">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </button>
-      <br>
-      <br>
-      <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
-      <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </a>
-      <br>
-      <br>
-      <button class="btn btn__grouped-first btn__super" title="Test button">Button</button>
-      <button class="btn btn__grouped-last btn__super btn__compound-action" title="Test button">
-          <span class="cf-icon cf-icon-down btn__grouped-last"></span>
-      </button>
+  markup: |
+    <a href="#" class="btn btn__grouped-first">Anchor</a>
+    <a href="#" class="btn btn__grouped-last btn__compound-action">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first" title="Test button">Button</button>
+    <button class="btn btn__grouped-last btn__compound-action" title="Test button">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__grouped-first btn__secondary">Anchor</a>
+    <a href="#" class="btn btn__grouped-last btn__secondary btn__compound-action">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first btn__secondary" title="Test button">Button</button>
+    <button class="btn btn__grouped-last btn__secondary btn__compound-action" title="Test button">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__grouped-first btn__warning">Anchor</a>
+    <a href="#" class="btn btn__grouped-last btn__warning btn__compound-action">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first btn__warning" title="Test button">Button</button>
+    <button class="btn btn__grouped-last btn__warning btn__compound-action" title="Test button">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__grouped-first btn__disabled">Anchor</a>
+    <a href="#" class="btn btn__grouped-last btn__disabled btn__compound-action">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first btn__disabled" title="Test button">Button</button>
+    <button class="btn btn__grouped-last btn__disabled btn__compound-action" title="Test button">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </button>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first" disabled title="Test button">Button w/ disabled attr</button>
+    <button class="btn btn__grouped-last btn__compound-action" disabled title="Test button">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </button>
+    <br>
+    <br>
+    <a href="#" class="btn btn__grouped-first btn__super">Anchor</a>
+    <a href="#" class="btn btn__grouped-last btn__super btn__compound-action">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </a>
+    <br>
+    <br>
+    <button class="btn btn__grouped-first btn__super" title="Test button">Button</button>
+    <button class="btn btn__grouped-last btn__super btn__compound-action" title="Test button">
+        <span class="cf-icon cf-icon-down btn__grouped-last"></span>
+    </button>
   tags:
-  - cf-buttons
-  - fj-icons
+    - cf-buttons
+    - fj-icons
 */
 
 .btn__compound-action {
@@ -841,35 +863,39 @@
 }
 
 
-/* topdoc
-  name: Button link
+/* doxray
+  label: .btn__link
   family: cf-buttons
   notes:
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn btn__link">Anchor Tag</a>
-      <button class="btn btn__link" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn btn__link hover">Anchor Tag</a>
-      <button class="btn btn__link hover" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__link focus">Anchor Tag</a>
-      <button class="btn btn__link focus" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn btn__link active">Anchor Tag</a>
-      <button class="btn btn__link active" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link active">
+  markup: |
+    <a href="#" class="btn btn__link">Anchor Tag</a>
+    <button class="btn btn__link" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn btn__link hover">Anchor Tag</a>
+    <button class="btn btn__link hover" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__link focus">Anchor Tag</a>
+    <button class="btn btn__link focus" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link focus">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn btn__link active">Anchor Tag</a>
+    <button class="btn btn__link active" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link active">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__link {
@@ -922,35 +948,39 @@
 }
 
 
-/* topdoc
-  name: Secondary button link
+/* doxray
+  label: .btn__link.btn__secondary
   family: cf-buttons
   notes:
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn btn__link btn__secondary">Anchor Tag</a>
-      <button class="btn btn__link btn__secondary" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__secondary">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn btn__link btn__secondary hover">Anchor Tag</a>
-      <button class="btn btn__link btn__secondary hover" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__secondary hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__link btn__secondary focus">Anchor Tag</a>
-      <button class="btn btn__link btn__secondary focus" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__secondary focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn btn__link btn__secondary active">Anchor Tag</a>
-      <button class="btn btn__link btn__secondary active" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__secondary active">
+  markup: |
+    <a href="#" class="btn btn__link btn__secondary">Anchor Tag</a>
+    <button class="btn btn__link btn__secondary" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__secondary">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn btn__link btn__secondary hover">Anchor Tag</a>
+    <button class="btn btn__link btn__secondary hover" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__secondary hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__link btn__secondary focus">Anchor Tag</a>
+    <button class="btn btn__link btn__secondary focus" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__secondary focus">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn btn__link btn__secondary active">Anchor Tag</a>
+    <button class="btn btn__link btn__secondary active" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__secondary active">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__link.btn__secondary {
@@ -983,35 +1013,39 @@
 }
 
 
-/* topdoc
-  name: Destructive action button link
+/* doxray
+  label: .btn__link.btn__warning
   family: cf-buttons
   notes:
     - "Note that the .visited, .hover, .focus, .active classes are for
        demonstration purposes only and should not be used in production."
-  patterns:
-  - name: Default state
-    markup: |
-      <a href="#" class="btn btn__link btn__warning">Anchor Tag</a>
-      <button class="btn btn__link btn__warning" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__warning">
-  - name: Hovered state
-    markup: |
-      <a href="#" class="btn btn__link btn__warning hover">Anchor Tag</a>
-      <button class="btn btn__link btn__warning hover" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__warning hover">
-  - name: Focused state
-    markup: |
-      <a href="#" class="btn btn__link btn__warning focus">Anchor Tag</a>
-      <button class="btn btn__link btn__warning focus" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__warning focus">
-  - name: Active state
-    markup: |
-      <a href="#" class="btn btn__link btn__warning active">Anchor Tag</a>
-      <button class="btn btn__link btn__warning active" title="Test button">Button Tag</button>
-      <input type="button" value="Input Tag" class="btn btn__link btn__warning active">
+  markup: |
+    <a href="#" class="btn btn__link btn__warning">Anchor Tag</a>
+    <button class="btn btn__link btn__warning" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__warning">
+
+    <br><br>
+
+    <code>:hover</code><br>
+    <a href="#" class="btn btn__link btn__warning hover">Anchor Tag</a>
+    <button class="btn btn__link btn__warning hover" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__warning hover">
+
+    <br><br>
+
+    <code>:focus</code><br>
+    <a href="#" class="btn btn__link btn__warning focus">Anchor Tag</a>
+    <button class="btn btn__link btn__warning focus" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__warning focus">
+
+    <br><br>
+
+    <code>:active</code><br>
+    <a href="#" class="btn btn__link btn__warning active">Anchor Tag</a>
+    <button class="btn btn__link btn__warning active" title="Test button">Button Tag</button>
+    <input type="button" value="Input Tag" class="btn btn__link btn__warning active">
   tags:
-  - cf-buttons
+    - cf-buttons
 */
 
 .btn__link.btn__warning {
@@ -1042,9 +1076,3 @@
     }
 
 }
-
-
-/* topdoc
-  name: EOF
-  eof: true
-*/
