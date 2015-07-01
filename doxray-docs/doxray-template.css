@@ -86,34 +86,6 @@ description:
 */
 /* doxray
 label:
-    .doxray-icon-file
-markup: |
-    <i class="doxray-icon-file"></i>
-*/
-.doxray-icon-file:before {
-  content: "ƒ";
-  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-weight: 400;
-}
-.doxray-icon-file:after {
-  content: " ";
-}
-/* doxray
-label:
-    .doxray-icon-pattern
-markup: |
-    <i class="doxray-icon-pattern"></i>
-*/
-.doxray-icon-pattern:before {
-  content: "⁋";
-  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
-  font-weight: 400;
-}
-.doxray-icon-pattern:after {
-  content: " ";
-}
-/* doxray
-label:
     .doxray-toc_masthead
 markup: |
     <h1 class="doxray-toc_masthead">
@@ -362,12 +334,12 @@ markup: |
 }
 .doxray-doc-description code {
   display: inline-block;
-  padding: 2px 5px;
-  border-radius: 3px;
+  padding: 3px 5px;
+  border-radius: 5px;
   background: #f8f8f8;
   color: #474646;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-  font-size: .8em;
+  font-size: .9em;
 }
 /* doxray
 label:
@@ -399,12 +371,12 @@ markup: |
 }
 .doxray-doc-note code {
   display: inline-block;
-  padding: 2px 5px;
-  border-radius: 3px;
+  padding: 3px 5px;
+  border-radius: 5px;
   background: #f8f8f8;
   color: #474646;
   font-family: "Lucida Sans Typewriter", "Lucida Console", monaco, "Bitstream Vera Sans Mono", monospace;
-  font-size: .8em;
+  font-size: .9em;
 }
 /* doxray
 label:
@@ -439,14 +411,8 @@ markup: |
     </div>
 */
 .doxray-doc-markup {
-  margin: 36px -36px;
+  margin: 54px -36px 36px;
   box-shadow: 0 0 6px #6e6c6c;
-  overflow: hidden;
-}
-.doxray-doc-markup:after {
-  display: table;
-  clear: both;
-  content: "";
 }
 /* doxray
 label:
@@ -511,8 +477,7 @@ label:
     .doxray-doc-code
 */
 .doxray-doc-code {
-  position: relative;
-  margin: 18px 0 0;
+  margin: 0;
 }
 /* doxray
 label:
@@ -525,54 +490,6 @@ label:
   background: #f8f8f8;
   font-size: 18px;
   line-height: 1.5;
-}
-/* doxray
-label:
-    .doxray-doc-code-expander
-*/
-.doxray-doc-code-expander {
-  position: relative;
-}
-/* doxray
-label:
-    .doxray-doc-code-expander_body
-*/
-.doxray-doc-code-expander_body {
-  height: 160px;
-  overflow: hidden;
-}
-/* doxray
-label:
-    .doxray-doc-code-expander_btn
-*/
-.doxray-doc-code-expander_btn,
-.doxray-doc-code-expander_btn:active,
-.doxray-doc-code-expander_btn:link,
-.doxray-doc-code-expander_btn:focus,
-.doxray-doc-code-expander_btn:hover,
-.doxray-doc-code-expander_btn:visited {
-  display: block;
-  width: 100%;
-  padding: .5em .75em;
-  border: 0;
-  background: #f0f0f0;
-  color: #474646;
-  font-size: 12px;
-  line-height: 1;
-  text-align: center;
-  text-decoration: none;
-  outline: 0;
-  cursor: pointer;
-}
-.doxray-doc-code-expander_btn:hover,
-.doxray-doc-code-expander_btn:focus {
-  background: #ebebeb;
-}
-.doxray-doc-code-expander_btn:before {
-  content: "⇣";
-}
-.doxray-doc-code-expander_btn__flipped:before {
-  content: "⇡";
 }
 /* doxray
 label:
@@ -622,4 +539,79 @@ label:
 }
 .doxray-doc-palette_input + .doxray-doc-palette_input {
   margin-top: -1px;
+}
+/* doxray
+label:
+    .doxray-tabs
+markup: |
+    <div class="doxray-tabs">
+        <div class="doxray-tabs_tabs">
+            <button class="doxray-tabs_btn">
+                Markup
+            </button>
+            <button class="doxray-tabs_btn">
+                Less
+            </button>
+        </div>
+        <div class="doxray-tabs_body">
+            Markup tab body
+        </div>
+        <div class="doxray-tabs_body">
+            Less tab body
+        </div>
+    </div>
+blockMarkup:
+    true
+*/
+.doxray-tabs_tabs {
+  position: relative;
+  top: -16px;
+  height: 0;
+  padding-left: 36px;
+}
+.doxray-tabs_btn,
+.doxray-tabs_btn:active,
+.doxray-tabs_btn:link,
+.doxray-tabs_btn:visited {
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+  padding: 10px 12px;
+  border: 1px solid #ffffff;
+  background: #6e6c6c;
+  color: #ffffff;
+  font-family: "Open Sans", "Segoe UI", "Helvetica Neue", Helvetica, Arial;
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  line-height: 1;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+.doxray-tabs_btn:hover,
+.doxray-tabs_btn__active,
+.doxray-tabs_btn__active:hover {
+  background: #474646;
+}
+.doxray-tabs_btn:focus {
+  outline: 0;
+}
+.doxray-tabs_btn + .doxray-tabs_btn {
+  margin-left: -4px;
+  border-left: 0;
+}
+.doxray-tabs_btn:first-child {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.doxray-tabs_btn:last-child {
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.doxray-tabs_body {
+  display: none;
+}
+.doxray-tabs_body__visible {
+  display: block;
 }

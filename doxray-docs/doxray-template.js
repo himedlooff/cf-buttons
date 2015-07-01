@@ -35,7 +35,7 @@ this.PatternLibrary.init = function() {
     this.initCollapsedTOCBtn();
 
     // Set event handlers.
-    this.$docs.on('click', '.js-doxray-doc-code-expander_btn', this.toggleCode.bind(this));
+    this.$docs.on('click', '[data-tabs-btn]', this.handleTabClick.bind(this));
 };
 
 this.PatternLibrary.compileMarkdown = function() {
@@ -91,19 +91,18 @@ this.PatternLibrary.handleToggleCollapsedTOCClick = function(e) {
     this.toggleCollapsedTOC(e.currentTarget);
 };
 
-this.PatternLibrary.toggleCode = function(e) {
-    var $el = $(e.currentTarget).parents('.doxray-doc-code-expander').find('.doxray-doc-code-expander_body');
-    var height;
-    if ($el.data('hide-height')) {
-        height = $el.data('hide-height');
-        $el.data('hide-height', '');
-    } else {
-        $el.data('hide-height', $el.outerHeight());
-        height = $el.css({'height': 'auto'}).outerHeight();
-        $el.attr('style', '');
-    }
-    $el.animate({ 'height': height }, 550);
-    $(e.currentTarget).toggleClass('doxray-doc-code-expander_btn__flipped');
+this.PatternLibrary.handleTabClick = function(e) {
+    var $this = $(e.currentTarget);
+    var id = $this.data('tabs-btn');
+    var currentBtnIsActive = $this.hasClass('doxray-tabs_btn__active');
+    console.log(currentBtnIsActive);
+    var $allBtns = $this.parents('[data-tabs]').find('[data-tabs-btn]');
+    var $allBodies = $this.parents('[data-tabs]').find('[data-tabs-body]');
+    var $matchingBody = $this.parents('[data-tabs]').find('[data-tabs-body="'+id+'"]');
+    $allBtns.not($this).removeClass('doxray-tabs_btn__active');
+    $this.toggleClass('doxray-tabs_btn__active', !currentBtnIsActive);
+    $allBodies.removeClass('doxray-tabs_body__visible');
+    $matchingBody.toggleClass('doxray-tabs_body__visible', !currentBtnIsActive);
 };
 
 this.PatternLibrary.makeContentHTML = function() {

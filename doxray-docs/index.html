@@ -117,8 +117,8 @@
                             {{/each}}
                         </div>
                     {{/if}}
-                    {{#if this.markup}}
-                        <div class="doxray-doc-markup">
+                    <div class="doxray-tabs doxray-doc-markup" data-tabs>
+                        {{#if this.markup}}
                             {{#if this.themes}}
                                 <div class="doxray-doc-markup_rendered{{#if ../this.blockMarkup}} doxray-doc-markup_rendered__block{{/if}} doxray-doc-markup-theme">
                                     <span class="doxray-doc-markup-theme_label">
@@ -139,19 +139,28 @@
                                     {{{this.markup}}}
                                 </div>
                             {{/if}}
-                            {{#if this.collapseMarkup}}
-                                <pre class="doxray-doc-code doxray-doc-code-expander"><code class="doxray-doc-code_text doxray-doc-code-expander_body">{{this.markup}}</code><button class="doxray-doc-code-expander_btn js-doxray-doc-code-expander_btn"></button></pre>
-                            {{else}}
-                                <pre class="doxray-doc-code"><code class="doxray-doc-code_text">{{this.markup}}</code></pre>
+                        {{/if}}
+                        <div class="doxray-tabs_tabs">
+                            {{#if this.markup}}
+                                <button class="doxray-tabs_btn{{#unless this.collapseMarkup}} doxray-tabs_btn__active{{/unless}}" data-tabs-btn="markup">markup</button>
+                            {{/if}}
+                            {{#if this.scss}}
+                                <button class="doxray-tabs_btn" data-tabs-btn="scss">scss</button>
+                            {{/if}}
+                            {{#if this.less}}
+                                <button class="doxray-tabs_btn" data-tabs-btn="less">less</button>
                             {{/if}}
                         </div>
-                    {{/if}}
-                    {{#if this.scss}}
-                        <pre class="doxray-doc-code doxray-doc-code-expander"><code class="doxray-doc-code_text doxray-doc-code-expander_body">{{this.scss}}</code><button class="doxray-doc-code-expander_btn js-doxray-doc-code-expander_btn"></button></pre>
-                    {{/if}}
-                    {{#if this.less}}
-                        <pre class="doxray-doc-code doxray-doc-code-expander"><code class="doxray-doc-code_text doxray-doc-code-expander_body">{{this.less}}</code><button class="doxray-doc-code-expander_btn js-doxray-doc-code-expander_btn"></button></pre>
-                    {{/if}}
+                        {{#if this.markup}}
+                            <pre class="doxray-tabs_body{{#unless this.collapseMarkup}} doxray-tabs_body__visible{{/unless}} doxray-doc-code" data-tabs-body="markup"><code class="doxray-doc-code_text">{{this.markup}}</code></pre>
+                        {{/if}}
+                        {{#if this.scss}}
+                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="scss"><code class="doxray-doc-code_text">{{this.scss}}</code></pre>
+                        {{/if}}
+                        {{#if this.less}}
+                            <pre class="doxray-tabs_body doxray-doc-code" data-tabs-body="less"><code class="doxray-doc-code_text">{{this.less}}</code></pre>
+                        {{/if}}
+                    </div>
                 </section>
             {{/unless}}{{/each}}
         </main>
@@ -164,6 +173,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600">
     <link rel="stylesheet" href="doxray-template.css">
     <link rel="stylesheet" href="../docs/static/css/main.css">
+    <!-- <link rel="stylesheet" href="your-stylesheet-here.css"> -->
 </head>
 <body class="doxray" id="doxray"></body>
 </html>
